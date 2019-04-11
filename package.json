@@ -6,6 +6,7 @@
     "setup": "yarn install",
     "start": "nodemon",
     "clean": "rimraf dist",
+    "test": "jest",
     "build": "npm run clean && npm run build:compile",
     "build:compile": "tsc -t ES5 --lib es6 --outDir ./dist"
   },
@@ -24,9 +25,13 @@
   },
   "devDependencies": {
     "@types/graphql": "14.2.0",
+    "@types/jest": "24.0.11",
+    "jest": "24.7.1",
+    "mocha": "6.1.2",
     "npm-run-all": "4.1.5",
     "rimraf": "2.6.3",
     "shx": "0.3.2",
-    "travis": "0.1.1"
+    "travis": "0.1.1",
+    "ts-jest": "24.0.2"
   }
 }
