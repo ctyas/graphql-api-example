@@ -1,0 +1,22 @@
+language: node_js
+node_js: 
+  - "node"
+
+cache:
+  - yarn
+  - npm
+
+before_script:
+  - npm run setup
+  - npm run build
+
+after_success:
+  - npm pack
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: T0pzxfH4a9VPIR9JO0AebSS6Wk3iQ5pD0BOkjMa/zv5pvmrxu7GXEoWPCaTG50rE1ts3l1DPE4r583s0PmCd/J1Lqv1ldY174bbrbTPCVy3CRYX7IIBfPakN2Z3VsyY7QXwXruw30Ea/G/lpD4tUHvLXddBPtdd8d28URW69nD5CuliFZkZyrHjN8GoSwg3fTxravfpIrnFIDVwVwjLD0VyMQjfXMHfOT/bLM2iBEv3SKO/ceOHxmbHAujIi5WkYKNWWO7kdL9FLYz2Z/axxjEEuLLAHg7dTvly2FDSgiYDsqeolu6ozQtmATBtprg9TerGhYfa2f2p35M9axWhP9cb9sK4NJUIjkQW6hzsE+KIzPp/Pf2Pmju1yAz1edPmj95+ecWGzmLGMu1B4Vu93TpY6bFOolCuDMinvNE4jUpuGnlD5Q0SUyzypQ0TQOiIhiK79bAICzeUNB/5DqTTE6f4GiXSG4cf5oiGtxl9zg+uoBMV+obfKV4TSN8HLmOUsE6C1sbCN9NUtfPGbA5EKeh7wNKf3J6WukkXMbF2LyxRTMt7aN2n/rpVaiAj0mPruyskcVYzDafMgblH/RsmSXoD5rZBPAM3TikhevRiM86KwebTOOOaZaVYhtEM65pqZ3cU43Mzq/CIkBgdRQBZ+iCOyijLUW1i3a8dz23cmnwE=
+  app: rails-test-app-article
+  on:
+    repo: felipeluizsoares/rails-test-app
