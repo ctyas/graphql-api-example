@@ -9,7 +9,7 @@ const bootstrap = async () => {
     resolvers
   });
 
-  server.listen().then(({ url }) => {
+  server.listen(process.env.PORT || 4000).then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
   });
 };
