@@ -1,18 +1,16 @@
 
-import { typeDefs } from 'graphql/schema';
-import { ApolloServer, PubSub } from 'apollo-server';
+import { typeDefs } from './graphql/schema';
+import { resolvers } from './graphql/resolvers';
+import { ApolloServer } from 'apollo-server';
 
 const bootstrap = async () => {
   const server = new ApolloServer({
     typeDefs,
-    context: {
-      pubsub: new PubSub()
-    },
+    resolvers
   });
 
-  server.listen().then(({ url, subscriptionsUrl }) => {
+  server.listen().then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
-    console.log(`🚀 Subs ready at ${subscriptionsUrl}`);
   });
 };
 

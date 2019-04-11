@@ -1,5 +1,5 @@
-import { Query } from 'graphql/types/query';
-import { types } from 'graphql/types';
+import { Query } from './types/query';
+import { types } from './types';
 import gql from "graphql-tag";
 import { PubSub } from 'apollo-server';
 

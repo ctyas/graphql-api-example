@@ -4,7 +4,8 @@
   "main": "./dist/server.js",
   "scripts": {
     "setup": "yarn install",
-    "start": "nodemon",
+    "start": "node dist/server.js",
+    "serve:live": "nodemon",
     "clean": "rimraf dist",
     "test": "jest",
     "build": "npm run clean && npm run build:compile",
