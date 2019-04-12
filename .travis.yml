@@ -7,11 +7,12 @@ cache:
   - npm
 
 before_script:
-  - npm run setup
-  - npm run build
+  - yarn run setup
+  - yarn run build
 
-after_success:
-  - npm pack
+script:
+  - yarn run test:coverage
+  - codecov
 
 deploy:
   provider: heroku

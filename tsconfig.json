@@ -8,11 +8,8 @@
       "lib": [
         "es2017"
       ],
-      "types": [
-        "node"
-      ],
       "sourceMap": true,
-      "baseUrl": "./src",
+      "rootDir": "./src",
       "outDir": "./dist",
       "allowSyntheticDefaultImports": true ,
       "esModuleInterop": true
