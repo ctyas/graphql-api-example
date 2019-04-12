@@ -3,8 +3,10 @@ node_js:
   - "node"
 
 cache:
-  - yarn
-  - npm
+  yarn: true
+  npm: true
+  directories:
+     - /home/travis/.rvm/
 
 before_script:
   - yarn run setup
