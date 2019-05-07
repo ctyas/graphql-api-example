@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "11.13.9",
-    "apollo-server": "2.4.8",
+    "apollo-server": "2.5.0",
     "graphql": "14.2.1",
     "koa-bodyparser": "4.2.1",
     "koa-router": "7.4.0",
