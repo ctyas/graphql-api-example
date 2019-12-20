@@ -37,5 +37,12 @@
     "shx": "0.3.2",
     "travis": "0.1.1",
     "ts-jest": "24.2.0"
+  },
+  "resolutions": {
+    "**/**/set-value": "^2.0.1",
+    "**/**/handlebars": "^4.5.3",
+    "**/**/https-proxy-agent": "^2.2.3",
+    "**/**/lodash": "^4.17.12",
+    "**/**/mixin-deep": "^1.3.2"
   }
 }
