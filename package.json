@@ -36,7 +36,7 @@
     "rimraf": "3.0.1",
     "shx": "0.3.2",
     "travis": "0.1.1",
-    "ts-jest": "24.2.0"
+    "ts-jest": "25.1.0"
   },
   "resolutions": {
     "**/**/set-value": "^2.0.1",
