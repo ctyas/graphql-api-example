@@ -34,6 +34,7 @@ jobs:
           yarn build
         
       - name: Tests
-        run: |
-          yarn test:coverage
-          codecov
+        run: yarn test:coverage
+      
+      - name: Codecov
+        uses: codecov/codecov-action@v2.1.0
